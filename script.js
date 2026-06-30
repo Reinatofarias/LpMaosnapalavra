@@ -47,19 +47,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Rastreamento de Profundidade de Rolagem (Scroll Depth)
+  // Rastreamento de Profundidade de Rolagem (Scroll Depth) e Sticky CTA unificados
   let scrolled25 = false;
   let scrolled50 = false;
   let scrolled75 = false;
   let scrolled90 = false;
+  let offerIsVisible = false;
 
-  window.addEventListener("scroll", () => {
+  const stickyCta = document.getElementById("sticky-cta-mobile");
+  const offerSection = document.getElementById("secao-oferta");
+
+  function updateScrollState() {
     const h = document.documentElement;
     const b = document.body;
-    const st = 'scrollTop';
-    const sh = 'scrollHeight';
-    
-    const percent = ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
+    const scrollTop = h.scrollTop || b.scrollTop;
+    const scrollHeight = h.scrollHeight || b.scrollHeight;
+    const clientHeight = h.clientHeight;
+    const percent = (scrollTop / (scrollHeight - clientHeight)) * 100;
 
     if (percent >= 25 && !scrolled25) {
       scrolled25 = true;
@@ -77,7 +81,40 @@ document.addEventListener("DOMContentLoaded", () => {
       scrolled90 = true;
       trackEvent("scroll_depth", { percent: 90 });
     }
-  });
+
+    // 2. Sticky Mobile CTA visibility
+    if (stickyCta && offerSection) {
+      const isMobile = window.innerWidth < 1024;
+      if (isMobile && scrollTop > 600 && !offerIsVisible) {
+        stickyCta.classList.add("visible");
+      } else {
+        stickyCta.classList.remove("visible");
+      }
+    }
+  }
+
+  // Listener otimizado com requestAnimationFrame e passive flag para rolagem mobile ultra-fluida
+  let scrollScheduled = false;
+  window.addEventListener("scroll", () => {
+    if (!scrollScheduled) {
+      scrollScheduled = true;
+      window.requestAnimationFrame(() => {
+        updateScrollState();
+        scrollScheduled = false;
+      });
+    }
+  }, { passive: true });
+
+  // Listener de resize com throttle por setTimeout
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    if (!resizeTimeout) {
+      resizeTimeout = setTimeout(() => {
+        resizeTimeout = null;
+        updateScrollState();
+      }, 200);
+    }
+  }, { passive: true });
 
   // ==========================================================================
   // 2. ACCORDION DO FAQ (Perguntas Frequentes)
@@ -192,43 +229,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // 4. STICKY MOBILE CTA (Botão Flutuante Mobile)
   // ==========================================================================
   
-  const stickyCta = document.getElementById("sticky-cta-mobile");
-  const offerSection = document.getElementById("secao-oferta");
-
   if (stickyCta && offerSection) {
-    
-    // Usamos Intersection Observer para monitorar quando a oferta principal está visível na tela
-    const observerOptions = {
-      root: null, // viewport
-      threshold: 0.1 // Dispara quando 10% da seção de oferta estiver visível
-    };
-
-    let offerIsVisible = false;
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         offerIsVisible = entry.isIntersecting;
-        handleStickyVisibility();
+        updateScrollState();
       });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
     observer.observe(offerSection);
-
-    function handleStickyVisibility() {
-      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-      const isMobile = window.innerWidth < 1024;
-
-      // Exibe se: estiver no mobile, rolou mais de 600px E a seção de oferta principal NÃO está visível
-      if (isMobile && scrollPosition > 600 && !offerIsVisible) {
-        stickyCta.classList.add("visible");
-      } else {
-        stickyCta.classList.remove("visible");
-      }
-    }
-
-    // Monitora eventos de rolagem e redimensionamento para atualizar o estado do botão
-    window.addEventListener("scroll", handleStickyVisibility);
-    window.addEventListener("resize", handleStickyVisibility);
   }
 
   // ==========================================================================
