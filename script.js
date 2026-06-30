@@ -140,10 +140,18 @@ document.addEventListener("DOMContentLoaded", () => {
       return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
     }
 
+    // Se os metadados já estiverem carregados, exibe a duração
+    if (audio.readyState >= 1) {
+      timeDisplay.textContent = `0:00 / ${formatTime(audio.duration)}`;
+    } else {
+      audio.addEventListener("loadedmetadata", () => {
+        timeDisplay.textContent = `0:00 / ${formatTime(audio.duration)}`;
+      });
+    }
+
     // Toggle Play / Pause
     playBtn.addEventListener("click", () => {
       if (audio.paused) {
-        // Carrega o áudio caso ainda não tenha sido iniciado (lazy loading de mídia)
         if (audio.readyState === 0) {
           audio.load();
         }
@@ -151,15 +159,15 @@ document.addEventListener("DOMContentLoaded", () => {
           .then(() => {
             svgPlay.style.display = "none";
             svgPause.style.display = "block";
-            soundwave.classList.add("soundwave-active");
-            trackEvent("audio_demo_play", { audio_title: "A Ovelhinha Perdida" });
+            if (soundwave) soundwave.classList.add("soundwave-active");
+            trackEvent("audio_demo_play", { audio_title: "Historia de Davi" });
           })
           .catch(err => console.error("Erro ao reproduzir o áudio:", err));
       } else {
         audio.pause();
         svgPlay.style.display = "block";
         svgPause.style.display = "none";
-        soundwave.classList.remove("soundwave-active");
+        if (soundwave) soundwave.classList.remove("soundwave-active");
       }
     });
 
@@ -167,14 +175,14 @@ document.addEventListener("DOMContentLoaded", () => {
     audio.addEventListener("timeupdate", () => {
       const progress = (audio.currentTime / audio.duration) * 100;
       progressBar.style.width = `${progress}%`;
-      timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration || 75)}`;
+      timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
     });
 
     // Reseta player ao finalizar a reprodução
     audio.addEventListener("ended", () => {
       svgPlay.style.display = "block";
       svgPause.style.display = "none";
-      soundwave.classList.remove("soundwave-active");
+      if (soundwave) soundwave.classList.remove("soundwave-active");
       progressBar.style.width = "0%";
       audio.currentTime = 0;
     });
