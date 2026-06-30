@@ -384,4 +384,27 @@ document.addEventListener("DOMContentLoaded", () => {
     
     revealElements.forEach(el => revealObserver.observe(el));
   }
+
+  // ==========================================================================
+  // 7. BUSCA EM TEMPO REAL NO FAQ (FAQ Filter)
+  // ==========================================================================
+  
+  const faqSearchInput = document.getElementById("faq-search-input");
+  
+  if (faqSearchInput && faqItems.length > 0) {
+    faqSearchInput.addEventListener("input", (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      
+      faqItems.forEach(item => {
+        const questionText = item.querySelector(".faq-trigger span").textContent.toLowerCase();
+        const answerText = item.querySelector(".faq-panel p").textContent.toLowerCase();
+        
+        if (questionText.includes(query) || answerText.includes(query)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  }
 });
