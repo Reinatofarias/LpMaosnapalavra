@@ -21,10 +21,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700;900&display=swap" rel="stylesheet">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/logo.webp">
+    
     <!-- CSS Estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Elementos Visuais Flutuantes no Background (Desktop) -->
+    <div class="floating-shapes-container">
+        <!-- Estrela Amarela -->
+        <svg class="floating-shape shape-1" width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" fill="var(--color-accent)" stroke="var(--color-border-dark)" stroke-width="2.5"/></svg>
+        <!-- Coração Rosa -->
+        <svg class="floating-shape shape-2" width="35" height="35" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="var(--color-pink)" stroke="var(--color-border-dark)" stroke-width="2.5"/></svg>
+        <!-- Cruz Azul -->
+        <svg class="floating-shape shape-3" width="30" height="40" viewBox="0 0 24 32" fill="none"><path d="M9 2v6H3v6h6v16h6V14h6V8h-6V2H9z" fill="var(--color-primary)" stroke="var(--color-border-dark)" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        <!-- Estrela Verde -->
+        <svg class="floating-shape shape-4" width="38" height="38" viewBox="0 0 24 24" fill="none"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" fill="var(--color-secondary)" stroke="var(--color-border-dark)" stroke-width="2.5"/></svg>
+    </div>
+
 
     <!-- Header Centralizado e Lúdico -->
     <header class="main-header">
@@ -94,42 +109,42 @@
                 <div class="benefits-grid scroll-container reveal-cascade">
                     <div class="benefit-card border-pink sketchy-border">
                         <div class="benefit-icon-wrapper">
-                            <img src="assets/Icone 1.webp" alt="Cor" class="benefit-icon-img">
+                            <img src="assets/Icone 1.webp" alt="Cor" class="benefit-icon-img" loading="lazy" width="76" height="76">
                         </div>
                         <h3 class="benefit-card-title text-pink">Cor</h3>
                         <p class="benefit-card-text">Estímulo direto à coordenação motora fina e expressão artística real.</p>
                     </div>
                     <div class="benefit-card border-green sketchy-border">
                         <div class="benefit-icon-wrapper">
-                            <img src="assets/Icone 2.webp" alt="Calma" class="benefit-icon-img">
+                            <img src="assets/Icone 2.webp" alt="Calma" class="benefit-icon-img" loading="lazy" width="76" height="76">
                         </div>
                         <h3 class="benefit-card-title text-green">Calma</h3>
                         <p class="benefit-card-text">Momentos de quietude e foco que acalmam a mente infantil.</p>
                     </div>
                     <div class="benefit-card border-blue sketchy-border">
                         <div class="benefit-icon-wrapper">
-                            <img src="assets/Icone 3.webp" alt="Fé" class="benefit-icon-img">
+                            <img src="assets/Icone 3.webp" alt="Fé" class="benefit-icon-img" loading="lazy" width="76" height="76">
                         </div>
                         <h3 class="benefit-card-title text-blue">Fé</h3>
                         <p class="benefit-card-text">Ensinamentos bíblicos simples que plantam a semente do Evangelho.</p>
                     </div>
                     <div class="benefit-card border-yellow sketchy-border">
                         <div class="benefit-icon-wrapper">
-                            <img src="assets/Icone 4.webp" alt="Criatividade" class="benefit-icon-img">
+                            <img src="assets/Icone 4.webp" alt="Criatividade" class="benefit-icon-img" loading="lazy" width="76" height="76">
                         </div>
                         <h3 class="benefit-card-title text-yellow">Criatividade</h3>
                         <p class="benefit-card-text">Espaço livre para imaginar, criar e construir com as próprias mãos.</p>
                     </div>
                     <div class="benefit-card border-pink sketchy-border">
                         <div class="benefit-icon-wrapper">
-                            <img src="assets/Icone 5.webp" alt="Histórias bíblicas" class="benefit-icon-img">
+                            <img src="assets/Icone 5.webp" alt="Histórias bíblicas" class="benefit-icon-img" loading="lazy" width="76" height="76">
                         </div>
                         <h3 class="benefit-card-title text-pink">Histórias bíblicas</h3>
                         <p class="benefit-card-text">Narrativas sobre a Palavra adaptadas para a linguagem infantil.</p>
                     </div>
                     <div class="benefit-card border-blue sketchy-border">
                         <div class="benefit-icon-wrapper">
-                            <img src="assets/icone 6.webp" alt="Atividades longe do celular" class="benefit-icon-img">
+                            <img src="assets/icone 6.webp" alt="Atividades longe do celular" class="benefit-icon-img" loading="lazy" width="76" height="76">
                         </div>
                         <h3 class="benefit-card-title text-blue">Atividades longe do celular</h3>
                         <p class="benefit-card-text">Diversão analógica e interativa longe de qualquer tela.</p>
@@ -137,13 +152,13 @@
                 </div>
             </div>
         </section>
-
+ 
         <!-- BLOCO DE DOR -->
         <section class="pain-section">
             <div class="container pain-grid reveal">
                 <div class="pain-visual">
                     <!-- Imagem real do bloco de dor -->
-                    <img src="assets/Perda.webp" alt="Criança triste no celular" class="pain-visual-img">
+                    <img src="assets/Perda.webp" alt="Criança triste no celular" class="pain-visual-img" loading="lazy" width="380" height="380">
                 </div>
                 
                 <div class="pain-content">
@@ -193,7 +208,7 @@
                 </div>
                 <div class="big-idea-visual">
                     <!-- Imagem real da troca de telas por atividades -->
-                    <img src="assets/troca.webp" alt="A troca da tela por atividades manuais" class="big-idea-img">
+                    <img src="assets/troca.webp" alt="A troca da tela por atividades manuais" class="big-idea-img" loading="lazy" width="450" height="300">
                 </div>
             </div>
         </section>
@@ -215,7 +230,7 @@
                 <div class="presentation-visual">
                     <div class="mockup-presentation-wrapper">
                         <!-- Imagem de Carol no lugar da logo -->
-                        <img src="assets/Carol.webp" alt="Carol Guimarães" class="presentation-carol-img">
+                        <img src="assets/Carol.webp" alt="Carol Guimarães" class="presentation-carol-img" loading="lazy" width="300" height="300">
                         <div class="badge-digital-stamp border-thick bg-pink text-white">
                             <span>Material</span>
                             <strong>100% Digital</strong>
@@ -239,7 +254,7 @@
                 <div class="inside-grid reveal-cascade">
                     <div class="inside-card border-pink sketchy-border">
                         <div class="inside-card-preview bg-pink-light">
-                            <img src="assets/P2.webp" alt="Seção de Desenhos Bíblicos" class="inside-card-img">
+                            <img src="assets/P2.webp" alt="Seção de Desenhos Bíblicos" class="inside-card-img" loading="lazy" width="280" height="200">
                         </div>
                         <div class="inside-card-content">
                             <h3 class="text-pink">Seção de Desenhos Bíblicos</h3>
@@ -248,7 +263,7 @@
                     </div>
                     <div class="inside-card border-green sketchy-border">
                         <div class="inside-card-preview bg-green-light">
-                            <img src="assets/P3.webp" alt="Seção de Histórias Bíblicas" class="inside-card-img">
+                            <img src="assets/P3.webp" alt="Seção de Histórias Bíblicas" class="inside-card-img" loading="lazy" width="280" height="200">
                         </div>
                         <div class="inside-card-content">
                             <h3 class="text-green">Seção de Histórias Bíblicas</h3>
@@ -257,7 +272,7 @@
                     </div>
                     <div class="inside-card border-blue sketchy-border">
                         <div class="inside-card-preview bg-blue-light">
-                            <img src="assets/P4.webp" alt="Seção de Atividades Práticas" class="inside-card-img">
+                            <img src="assets/P4.webp" alt="Seção de Atividades Práticas" class="inside-card-img" loading="lazy" width="280" height="200">
                         </div>
                         <div class="inside-card-content">
                             <h3 class="text-blue">Seção de Atividades Práticas</h3>
@@ -266,16 +281,16 @@
                     </div>
                     <div class="inside-card border-yellow sketchy-border">
                         <div class="inside-card-preview bg-yellow-light">
-                            <img src="assets/P5.webp" alt="Seção Momento de Calma" class="inside-card-img">
+                            <img src="assets/P5.webp" alt="Seção Momento de Calma" class="inside-card-img" loading="lazy" width="280" height="200">
                         </div>
                         <div class="inside-card-content">
                             <h3 class="text-yellow">Seção Momento de Calma</h3>
-                            <p>Atividades com traços focados em proporcionar momentos de silêncio, concentração e quietude.</p>
+                            <p>Atividades com traços focados em proporcionar momentos de silêncio, concentration e quietude.</p>
                         </div>
                     </div>
                     <div class="inside-card border-pink sketchy-border">
                         <div class="inside-card-preview bg-pink-light">
-                            <img src="assets/P6.webp" alt="Seção de Dobraduras e Recortes" class="inside-card-img">
+                            <img src="assets/P6.webp" alt="Seção de Dobraduras e Recortes" class="inside-card-img" loading="lazy" width="280" height="200">
                         </div>
                         <div class="inside-card-content">
                             <h3 class="text-pink">Seção de Dobraduras e Recortes</h3>
@@ -284,7 +299,7 @@
                     </div>
                     <div class="inside-card border-blue sketchy-border">
                         <div class="inside-card-preview bg-blue-light">
-                            <img src="assets/P7.webp" alt="Atualizações Constantes" class="inside-card-img">
+                            <img src="assets/P7.webp" alt="Atualizações Constantes" class="inside-card-img" loading="lazy" width="280" height="200">
                         </div>
                         <div class="inside-card-content">
                             <h3 class="text-blue">Atualizações Constantes</h3>
@@ -302,11 +317,11 @@
                     <div class="book-preview-carousel-wrapper sketchy-border">
                         <div class="carousel-container">
                             <div class="carousel-slides">
-                                <img src="assets/Page1.webp" alt="Prévia de atividade da Área de Membros Mãos na Palavra™" class="carousel-slide active">
-                                <img src="assets/Page2.webp" alt="Prévia de atividade da Área de Membros Mãos na Palavra™" class="carousel-slide">
-                                <img src="assets/Page 3.webp" alt="Prévia de atividade da Área de Membros Mãos na Palavra™" class="carousel-slide">
-                                <img src="assets/Page 4.webp" alt="Prévia de atividade da Área de Membros Mãos na Palavra™" class="carousel-slide">
-                                <img src="assets/Page 5.webp" alt="Prévia de atividade da Área de Membros Mãos na Palavra™" class="carousel-slide">
+                                <img src="assets/Page1.webp" alt="Prévia de atividade da Área de Membros Mãos na Palavra™" class="carousel-slide active" loading="lazy">
+                                <img src="assets/Page2.webp" alt="Prévia de atividade da Área de Membros Mãos na Palavra™" class="carousel-slide" loading="lazy">
+                                <img src="assets/Page 3.webp" alt="Prévia de atividade da Área de Membros Mãos na Palavra™" class="carousel-slide" loading="lazy">
+                                <img src="assets/Page 4.webp" alt="Prévia de atividade da Área de Membros Mãos na Palavra™" class="carousel-slide" loading="lazy">
+                                <img src="assets/Page 5.webp" alt="Prévia de atividade da Área de Membros Mãos na Palavra™" class="carousel-slide" loading="lazy">
                             </div>
                             <!-- Botões de Navegação do Carrossel -->
                             <button type="button" class="carousel-btn prev-btn" id="btn-carousel-prev" aria-label="Página anterior">◀</button>
@@ -364,7 +379,7 @@
                         
                         <!-- Container com a classe do áudio -->
                         <div class="bonus-img-container">
-                            <img src="assets/Bônus 2.webp" alt="Plataforma de Histórias Bíblicas Infantis" class="bonus-card-img bonus-img-audio">
+                            <img src="assets/Bônus 2.webp" alt="Plataforma de Histórias Bíblicas Infantis" class="bonus-card-img bonus-img-audio" loading="lazy">
                         </div>
                         
                         <h3 class="bonus-card-title text-blue">Plataforma de Histórias Bíblicas Infantis</h3>
@@ -396,7 +411,7 @@
                         
                         <!-- Container com a classe das dobraduras -->
                         <div class="bonus-img-container">
-                            <img src="assets/Bônus 1.webp" alt="Kit de Dobraduras Cristãs" class="bonus-card-img bonus-img-craft">
+                            <img src="assets/Bônus 1.webp" alt="Kit de Dobraduras Cristãs" class="bonus-card-img bonus-img-craft" loading="lazy">
                         </div>
                         
                         <h3 class="bonus-card-title text-green">Kit de Dobraduras Cristãs</h3>
@@ -409,7 +424,7 @@
                         
                         <!-- Container com a classe do guia -->
                         <div class="bonus-img-container">
-                            <img src="assets/Bônus 3.webp" alt="Guia Cantinho Cristão Sem Telas" class="bonus-card-img bonus-img-guide">
+                            <img src="assets/Bônus 3.webp" alt="Guia Cantinho Cristão Sem Telas" class="bonus-card-img bonus-img-guide" loading="lazy">
                         </div>
                         
                         <h3 class="bonus-card-title text-pink">Guia Cantinho Cristão Sem Telas</h3>
@@ -586,7 +601,7 @@
                             
                             <!-- Combo de Imagem menor para caber na caixa -->
                             <div class="offer-bundle-visual" style="margin-bottom: var(--spacing-sm); padding-top: var(--spacing-xs);">
-                                <img src="assets/All.webp" alt="Kit Completo Mãos na Palavra™ + Todos os Bônus" class="offer-bundle-img" style="max-height: 140px; width: auto;">
+                                <img src="assets/All.webp" alt="Kit Completo Mãos na Palavra™ + Todos os Bônus" class="offer-bundle-img" style="max-height: 140px; width: auto;" loading="lazy" width="280" height="140">
                             </div>
                             
                             <h3 class="offer-plan-title" style="font-family: var(--font-heading); font-size: 1.8rem; margin: 0 0 var(--spacing-md) 0; color: var(--color-text-main);">Acesso Completo</h3>
@@ -654,7 +669,7 @@
             <div class="container guarantee-grid">
                 <div class="guarantee-visual">
                     <!-- Selo de Garantia Real -->
-                    <img src="assets/Garantia.webp" alt="Garantia de 7 dias Mãos na Palavra" class="guarantee-seal-img">
+                    <img src="assets/Garantia.webp" alt="Garantia de 7 dias Mãos na Palavra" class="guarantee-seal-img" loading="lazy" width="150" height="150">
                 </div>
                 
                 <div class="guarantee-content">
