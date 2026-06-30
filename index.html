@@ -454,40 +454,127 @@
         <!-- OFERTA -->
         <section class="offer-section" id="secao-oferta">
             <div class="container">
-                <div class="offer-box border-thick sketchy-border reveal">
-                    <!-- Combo de Imagens (Livro + Bônus) empilhados -->
-                    <!-- Combo de Imagens Unificado (Livro + Bônus) -->
-                    <div class="offer-bundle-visual">
-                        <img src="assets/All.webp" alt="Kit Completo Mãos na Palavra™ + Todos os Bônus" class="offer-bundle-img">
+                <h2 class="section-title text-center" style="margin-bottom: var(--spacing-lg);">Escolha o plano ideal para sua família</h2>
+                
+                <div class="pricing-grid">
+                    <!-- OFERTA BÁSICA (Apenas Atividades) -->
+                    <div class="offer-box border-thick sketchy-border reveal" style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <span class="offer-badge bg-blue text-white" style="background-color: var(--color-primary) !important;">PLANO BÁSICO</span>
+                            
+                            <h3 class="offer-plan-title" style="font-family: var(--font-heading); font-size: 1.8rem; margin: var(--spacing-sm) 0 var(--spacing-md) 0; color: var(--color-text-main);">Apenas Colorir</h3>
+                            
+                            <div class="offer-items" style="margin-bottom: var(--spacing-lg); min-height: 240px; border-bottom: 2.5px dashed var(--color-border-dark);">
+                                <p style="margin-bottom: var(--spacing-sm); font-weight: 700; text-align: left;">Você recebe:</p>
+                                <ul style="list-style: none; text-align: left; padding-left: 0; margin-bottom: var(--spacing-md);">
+                                    <li style="margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 8px;">
+                                        <span>✔️</span>
+                                        <span><strong>Seção de Desenhos Bíblicos</strong> (Mais de 100 desenhos para colorir)</span>
+                                    </li>
+                                    <li style="margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 8px;">
+                                        <span>✔️</span>
+                                        <span><strong>Seção de Histórias Bíblicas</strong> (Textos adaptados para as crianças)</span>
+                                    </li>
+                                    <li style="margin-bottom: 12px; font-size: 0.95rem; color: var(--color-text-muted); text-decoration: line-through; display: flex; align-items: flex-start; gap: 8px; opacity: 0.5;">
+                                        <span>❌</span>
+                                        <span>Seção de Atividades Práticas e Jogos</span>
+                                    </li>
+                                    <li style="margin-bottom: 12px; font-size: 0.95rem; color: var(--color-text-muted); text-decoration: line-through; display: flex; align-items: flex-start; gap: 8px; opacity: 0.5;">
+                                        <span>❌</span>
+                                        <span>Seção Momento de Calma e Foco</span>
+                                    </li>
+                                    <li style="margin-bottom: 12px; font-size: 0.95rem; color: var(--color-text-muted); text-decoration: line-through; display: flex; align-items: flex-start; gap: 8px; opacity: 0.5;">
+                                        <span>❌</span>
+                                        <span>Todos os Bônus e Áudios</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="pricing-container" style="margin-bottom: var(--spacing-md);">
+                                <span class="pricing-anchor">De R$27,97</span>
+                                <div class="main-price-row" style="color: var(--color-primary-dark);">
+                                    <span class="price-currency">R$</span>
+                                    <span class="price-value">9</span>
+                                    <span class="price-cents">,97</span>
+                                    <span class="price-condition">à vista</span>
+                                </div>
+                            </div>
+                            
+                            <div class="offer-cta-group">
+                                <a href="https://pay.kiwify.com.br/placeholder?src=lp_offer_basic" class="btn btn-secondary btn-large">
+                                    Quero o Plano Básico
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
-                    <span class="offer-badge bg-pink">Oferta especial POR TEMPO LIMITADO.</span>
-                    
-                    <div class="offer-items" style="max-width: 600px; margin: 0 auto var(--spacing-lg) auto;">
-                        <p style="margin-bottom: var(--spacing-sm); font-weight: 700; text-align: left;">Você recebe:</p>
-                        <ul style="list-style: none; text-align: left; padding-left: var(--spacing-md); margin-bottom: var(--spacing-md);">
-                            <li style="margin-bottom: 8px;">• Acesso completo à Área de Membros Mãos na Palavra™ (com mais de 100 atividades)</li>
-                            <li style="margin-bottom: 8px;">• Plataforma de Histórias Bíblicas Infantis</li>
-                            <li style="margin-bottom: 8px;">• Kit de Dobraduras Cristãs</li>
-                            <li style="margin-bottom: 8px;">• Guia Cantinho Cristão Sem Telas</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="pricing-container">
-                        <span class="pricing-anchor">De R$137</span>
-                        <div class="main-price-row">
-                            <span class="price-currency">R$</span>
-                            <span class="price-value">37</span>
-                            <span class="price-cents">,00</span>
-                            <span class="price-condition">à vista</span>
+                    <!-- OFERTA COMPLETA (Tudo + Bônus) -->
+                    <div class="offer-box border-thick sketchy-border reveal popular-plan" style="background-color: var(--color-pink-light); display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <span class="offer-badge bg-pink text-white" style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%) rotate(-2deg); font-size: 0.85rem; padding: 8px 20px; z-index: 10;">RECOMENDADO (MELHOR CUSTO-BENEFÍCIO)</span>
+                            
+                            <!-- Combo de Imagem menor para caber na caixa -->
+                            <div class="offer-bundle-visual" style="margin-bottom: var(--spacing-sm); padding-top: var(--spacing-lg);">
+                                <img src="assets/All.webp" alt="Kit Completo Mãos na Palavra™ + Todos os Bônus" class="offer-bundle-img" style="max-height: 140px; width: auto;">
+                            </div>
+                            
+                            <h3 class="offer-plan-title" style="font-family: var(--font-heading); font-size: 1.8rem; margin: 0 0 var(--spacing-md) 0; color: var(--color-text-main);">Acesso Completo</h3>
+                            
+                            <div class="offer-items" style="margin-bottom: var(--spacing-lg); min-height: 240px; border-bottom: 2.5px dashed var(--color-border-dark);">
+                                <p style="margin-bottom: var(--spacing-sm); font-weight: 700; text-align: left;">Você recebe tudo:</p>
+                                <ul style="list-style: none; text-align: left; padding-left: 0; margin-bottom: var(--spacing-md);">
+                                    <li style="margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 8px;">
+                                        <span>✔️</span>
+                                        <span><strong>Seção de Desenhos Bíblicos</strong> (+100 desenhos)</span>
+                                    </li>
+                                    <li style="margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 8px;">
+                                        <span>✔️</span>
+                                        <span><strong>Seção de Histórias Bíblicas</strong> (Textos adaptados)</span>
+                                    </li>
+                                    <li style="margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 8px;">
+                                        <span>✔️</span>
+                                        <span><strong>Seção de Atividades Práticas</strong> (Jogos e labirintos)</span>
+                                    </li>
+                                    <li style="margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 8px;">
+                                        <span>✔️</span>
+                                        <span><strong>Seção Momento de Calma</strong> (Silêncio e foco)</span>
+                                    </li>
+                                    <li style="margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 8px;">
+                                        <span>⭐</span>
+                                        <span><strong>Seção de Dobraduras e Recortes</strong></span>
+                                    </li>
+                                    <li style="margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 8px;">
+                                        <span>🎁</span>
+                                        <span><strong>BÔNUS: Histórias Bíblicas em Áudio</strong></span>
+                                    </li>
+                                    <li style="margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 8px;">
+                                        <span>🎁</span>
+                                        <span><strong>BÔNUS: Guia Cantinho Cristão Sem Telas</strong></span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <span class="pricing-installments">Ou 5x de R$10,52</span>
-                    </div>
-                    
-                    <div class="offer-cta-group">
-                        <a href="https://pay.kiwify.com.br/placeholder?src=lp_offer" class="btn btn-primary btn-large btn-pulse">
-                            Quero tirar meu filho das telas com Jesus
-                        </a>
+                        
+                        <div>
+                            <div class="pricing-container" style="margin-bottom: var(--spacing-md);">
+                                <span class="pricing-anchor">De R$189,97</span>
+                                <div class="main-price-row" style="color: var(--color-pink-dark);">
+                                    <span class="price-currency">R$</span>
+                                    <span class="price-value">37</span>
+                                    <span class="price-cents">,97</span>
+                                    <span class="price-condition">à vista</span>
+                                </div>
+                                <span class="pricing-installments">Ou 5x de R$ 8,47</span>
+                            </div>
+                            
+                            <div class="offer-cta-group">
+                                <a href="https://pay.kiwify.com.br/placeholder?src=lp_offer_complete" class="btn btn-primary btn-large btn-pulse">
+                                    Quero o Acesso Completo com Bônus
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
