@@ -289,6 +289,70 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================================================
+  // 5b. CARROSSEL DE DEPOIMENTOS (Testimonials Carousel)
+  // ==========================================================================
+  
+  const testimonialSlides = document.querySelectorAll(".testimonial-slide");
+  const testimonialPrevBtn = document.getElementById("btn-testimonial-prev");
+  const testimonialNextBtn = document.getElementById("btn-testimonial-next");
+  const testimonialIndicators = document.querySelectorAll("#testimonial-indicators .indicator");
+  
+  if (testimonialSlides.length > 0 && testimonialPrevBtn && testimonialNextBtn) {
+    let currentTestimonial = 0;
+    
+    function showTestimonial(index) {
+      if (index >= testimonialSlides.length) {
+        currentTestimonial = 0;
+      } else if (index < 0) {
+        currentTestimonial = testimonialSlides.length - 1;
+      } else {
+        currentTestimonial = index;
+      }
+      
+      testimonialSlides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (testimonialIndicators[i]) testimonialIndicators[i].classList.remove("active");
+      });
+      
+      testimonialSlides[currentTestimonial].classList.add("active");
+      if (testimonialIndicators[currentTestimonial]) testimonialIndicators[currentTestimonial].classList.add("active");
+      
+      trackEvent("view_testimonial", {
+        testimonial_index: currentTestimonial + 1
+      });
+    }
+    
+    // Auto-play do carrossel (avança a cada 6 segundos)
+    let testimonialAutoPlay = setInterval(() => {
+      showTestimonial(currentTestimonial + 1);
+    }, 6000);
+    
+    function resetTestimonialAutoPlay() {
+      clearInterval(testimonialAutoPlay);
+      testimonialAutoPlay = setInterval(() => {
+        showTestimonial(currentTestimonial + 1);
+      }, 6000);
+    }
+    
+    testimonialPrevBtn.addEventListener("click", () => {
+      showTestimonial(currentTestimonial - 1);
+      resetTestimonialAutoPlay();
+    });
+    
+    testimonialNextBtn.addEventListener("click", () => {
+      showTestimonial(currentTestimonial + 1);
+      resetTestimonialAutoPlay();
+    });
+    
+    testimonialIndicators.forEach((indicator, i) => {
+      indicator.addEventListener("click", () => {
+        showTestimonial(i);
+        resetTestimonialAutoPlay();
+      });
+    });
+  }
+
+  // ==========================================================================
   // 6. ANIMAÇÃO DE REVELAÇÃO NO SCROLL (Scroll Reveal)
   // ==========================================================================
   

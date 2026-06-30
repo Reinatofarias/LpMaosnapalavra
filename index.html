@@ -422,30 +422,98 @@
         <!-- PROVA -->
         <section class="proof-section">
             <div class="container">
-                <h2 class="section-title text-center">Veja como é simples usar</h2>
+                <h2 class="section-title text-center">O que dizem as famílias que já usam</h2>
                 
-                <div class="testimonials-grid scroll-container reveal-cascade">
-                    <div class="testimonial-card border-pink sketchy-border">
-                        <div class="rating-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"Vídeo de criança colorindo e fotos das páginas impressas me convenceram. Ver meu filho colorindo e ouvindo as histórias em áudio foi a melhor troca que fiz pelo celular."</p>
-                        <div class="testimonial-user">
-                            <div class="user-avatar-sim bg-pink-light text-pink">Mãe</div>
-                            <div class="user-info">
-                                <strong>Depoimento de Mãe</strong>
-                                <span>Carol como professora</span>
+                <div class="testimonials-carousel-wrapper sketchy-border reveal">
+                    <div class="testimonials-carousel-container">
+                        <div class="testimonial-slides">
+                            <!-- Slide 1 -->
+                            <div class="testimonial-slide active">
+                                <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"A facilidade de navegar na área de membros e poder imprimir apenas as atividades que vamos usar no dia facilita muito a nossa rotina em casa."</p>
+                                <div class="testimonial-user">
+                                    <div class="user-avatar-sim bg-pink-light text-pink">JC</div>
+                                    <div class="user-info">
+                                        <strong>Juliana Costa</strong>
+                                        <span>Mãe do Benício (5 anos)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="testimonial-slide">
+                                <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"Ver minha filha colorindo e ouvindo as histórias em áudio foi a melhor troca que fiz pelo celular. As histórias acalmam e ensinam ao mesmo tempo."</p>
+                                <div class="testimonial-user">
+                                    <div class="user-avatar-sim bg-green-light text-green">MS</div>
+                                    <div class="user-info">
+                                        <strong>Mariana Souza</strong>
+                                        <span>Mãe da Beatriz (3 anos)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="testimonial-slide">
+                                <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"Antes eu perdia horas procurando desenhos na internet e sempre vinha com qualidade ruim. Ter um portal organizado com histórias e atividades prontas salvou meu tempo."</p>
+                                <div class="testimonial-user">
+                                    <div class="user-avatar-sim bg-blue-light text-blue">RF</div>
+                                    <div class="user-info">
+                                        <strong>Renata Farias</strong>
+                                        <span>Mãe do Davi (6 anos)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="testimonial-slide">
+                                <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"As dobraduras cristãs são a parte favorita da Clara! Nós montamos a Arca de Noé juntas no final de semana. É um material lindo, muito lúdico e com propósito de verdade."</p>
+                                <div class="testimonial-user">
+                                    <div class="user-avatar-sim bg-yellow-light text-yellow">PA</div>
+                                    <div class="user-info">
+                                        <strong>Patrícia Alves</strong>
+                                        <span>Catequista e Mãe da Clara (5 anos)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="testimonial-slide">
+                                <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"Eu tinha medo do meu filho não gostar por estar acostumado com a agitação da TV. Mas a Seção Momento de Calma acalma ele de um jeito incrível. Ele fica concentrado pintando."</p>
+                                <div class="testimonial-user">
+                                    <div class="user-avatar-sim bg-pink-light text-pink">TS</div>
+                                    <div class="user-info">
+                                        <strong>Tiago Santos</strong>
+                                        <span>Pai do Samuel (4 anos)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="testimonial-slide">
+                                <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="testimonial-text">"O custo-benefício do Acesso Completo é absurdo. Imprimo para os meus dois filhos fazerem juntos. Os áudios são super envolventes e eles já decoraram várias histórias da Bíblia!"</p>
+                                <div class="testimonial-user">
+                                    <div class="user-avatar-sim bg-green-light text-green">CR</div>
+                                    <div class="user-info">
+                                        <strong>Camila Rocha</strong>
+                                        <span>Mãe da Sofia (7 anos) e do Pedro (5 anos)</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        
+                        <!-- Botões do Carrossel -->
+                        <button type="button" class="carousel-btn prev-btn" id="btn-testimonial-prev" aria-label="Depoimento anterior">◀</button>
+                        <button type="button" class="carousel-btn next-btn" id="btn-testimonial-next" aria-label="Próximo depoimento">▶</button>
                     </div>
-                    <div class="testimonial-card border-green sketchy-border">
-                        <div class="rating-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"A facilidade de navegar na área de membros e poder imprimir apenas as atividades que vamos usar no dia facilita muito a nossa rotina em casa."</p>
-                        <div class="testimonial-user">
-                            <div class="user-avatar-sim bg-green-light text-green">Mãe</div>
-                            <div class="user-info">
-                                <strong>Depoimento de Mãe</strong>
-                                <span>Carol como professora</span>
-                            </div>
-                        </div>
+                    
+                    <!-- Indicadores -->
+                    <div class="testimonial-indicators" id="testimonial-indicators">
+                        <span class="indicator active" data-index="0"></span>
+                        <span class="indicator" data-index="1"></span>
+                        <span class="indicator" data-index="2"></span>
+                        <span class="indicator" data-index="3"></span>
+                        <span class="indicator" data-index="4"></span>
+                        <span class="indicator" data-index="5"></span>
                     </div>
                 </div>
             </div>
